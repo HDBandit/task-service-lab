@@ -4,6 +4,8 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.wordnik.swagger.annotations.ApiModel;
 
 /**
@@ -12,6 +14,11 @@ import com.wordnik.swagger.annotations.ApiModel;
  * </p>
  *
  */
+@JsonTypeInfo(use=JsonTypeInfo.Id.NAME, include=JsonTypeInfo.As.PROPERTY, property="type")
+@JsonSubTypes({
+	@JsonSubTypes.Type(value=CreateGroupTaskRequest.class, name="group"),
+	@JsonSubTypes.Type(value=CreateUserTaskRequest.class, name="user"),
+})
 @ApiModel(value="AbstractCreateTaskRequest", description="Petición genérica tarea", subTypes = {CreateGroupTaskRequest.class, CreateUserTaskRequest.class})
 public class AbstractCreateTaskRequest implements CreateTaskRequest {
 	

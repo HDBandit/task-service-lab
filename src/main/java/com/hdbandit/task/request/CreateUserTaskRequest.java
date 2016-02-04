@@ -4,6 +4,7 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.wordnik.swagger.annotations.ApiModel;
 
 /**
@@ -13,6 +14,7 @@ import com.wordnik.swagger.annotations.ApiModel;
  * </p>
  *
  */
+@JsonTypeName("user")
 @ApiModel(value="CreateGroupTaskRequest", description="Petición creación tarea de usuario", parent = AbstractCreateTaskRequest.class)
 public class CreateUserTaskRequest extends AbstractCreateTaskRequest {
 
