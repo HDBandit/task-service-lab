@@ -4,6 +4,8 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.wordnik.swagger.annotations.ApiModel;
+
 /**
  * <p>
  * Esta clase declara atributos específicos de tareas de usuario.
@@ -11,6 +13,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  * </p>
  *
  */
+@ApiModel(value="CreateGroupTaskRequest", description="Petición creación tarea de usuario", parent = AbstractCreateTaskRequest.class)
 public class CreateUserTaskRequest extends AbstractCreateTaskRequest {
 
 	@NotEmpty

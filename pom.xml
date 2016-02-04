@@ -20,5 +20,15 @@
         	<artifactId>hadoop-core</artifactId>
         	<version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.mangofactory</groupId>
+            <artifactId>swagger-springmvc</artifactId>
+            <version>0.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.wordnik</groupId>
+			<artifactId>swagger-core</artifactId>
+			<version>1.5.3-M1</version>
+		</dependency>
     </dependencies>
 </project>

@@ -4,12 +4,15 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.wordnik.swagger.annotations.ApiModel;
+
 /**
  * <p>
  * Esta clase declara atributos específicos de todas las tareas (parte común)
  * </p>
  *
  */
+@ApiModel(value="AbstractCreateTaskRequest", description="Petición genérica tarea", subTypes = {CreateGroupTaskRequest.class, CreateUserTaskRequest.class})
 public class AbstractCreateTaskRequest implements CreateTaskRequest {
 	
 	// Anotamos todas las bean validations necesarias

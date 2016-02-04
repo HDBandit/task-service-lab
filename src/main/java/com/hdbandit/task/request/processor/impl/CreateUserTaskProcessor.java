@@ -4,6 +4,7 @@ import com.hdbandit.task.request.CreateTaskRequest;
 import com.hdbandit.task.request.CreateUserTaskRequest;
 import com.hdbandit.task.request.processor.CreateTaskRequestProcessor;
 
+
 public class CreateUserTaskProcessor implements CreateTaskRequestProcessor {
 
 	@Override
