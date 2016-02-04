@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 
 import com.hdbandit.task.request.TaskType;
 import com.hdbandit.task.request.processor.CreateTaskRequestProcessor;
-import com.hdbandit.task.request.processor.impl.CreateGroupTaskProcessor;
-import com.hdbandit.task.request.processor.impl.CreateUserTaskProcessor;
+import com.hdbandit.task.request.processor.impl.CreateGroupTaskRequestProcessor;
+import com.hdbandit.task.request.processor.impl.CreateUserTaskRequestProcessor;
 
 @Configuration
 public class TaskRequestProcessorsConfig {
@@ -24,8 +24,8 @@ public class TaskRequestProcessorsConfig {
 	@Bean
 	public Map<TaskType, CreateTaskRequestProcessor> createTaskRequestProcessors() {
 		HashMap<TaskType, CreateTaskRequestProcessor> createTaskRequestProcessors = new HashMap<TaskType, CreateTaskRequestProcessor>();
-		createTaskRequestProcessors.put(TaskType.GROUP, new CreateGroupTaskProcessor());
-		createTaskRequestProcessors.put(TaskType.USER, new CreateUserTaskProcessor());
+		createTaskRequestProcessors.put(TaskType.GROUP, new CreateGroupTaskRequestProcessor());
+		createTaskRequestProcessors.put(TaskType.USER, new CreateUserTaskRequestProcessor());
 		return createTaskRequestProcessors;
 	}
 

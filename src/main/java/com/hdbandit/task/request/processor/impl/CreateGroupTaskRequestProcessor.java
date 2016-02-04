@@ -4,7 +4,7 @@ import com.hdbandit.task.request.CreateGroupTaskRequest;
 import com.hdbandit.task.request.CreateTaskRequest;
 import com.hdbandit.task.request.processor.CreateTaskRequestProcessor;
 
-public class CreateGroupTaskProcessor implements CreateTaskRequestProcessor {
+public class CreateGroupTaskRequestProcessor implements CreateTaskRequestProcessor {
 
 	@Override
 	public void process(CreateTaskRequest createTaskRequest) {
